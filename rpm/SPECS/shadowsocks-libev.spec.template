@@ -25,6 +25,7 @@ Conflicts:	python-shadowsocks python3-shadowsocks
 BuildRequires:	openssl-devel
 Requires:	openssl
 %if 0%{?with_systemd}
+BuildRequires:	systemd
 Requires:	systemd
 %else
 Requires:	chkconfig
