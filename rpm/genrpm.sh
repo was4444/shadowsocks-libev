@@ -60,4 +60,4 @@ sed -e "s/__FAKE_VERSION_TO_BE_SUBSTITUTED__/${version}/g" \
     -e "s/__FAKE_FORMAT_TO_BE_SUBSTITUTED__/${format}/g" \
     SPECS/${spec_name}.template > SPECS/${spec_name}
 
-rpmbuild -bb SPECS/${spec_name} --define "%_topdir `pwd`"
+rpmbuild -ba SPECS/${spec_name} --define "%_topdir `pwd`"
