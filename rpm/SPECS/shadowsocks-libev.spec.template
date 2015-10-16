@@ -29,7 +29,6 @@ BuildRequires:	systemd
 Requires:	systemd
 %else
 Requires:	chkconfig
-Requires:	service
 %endif
 
 
