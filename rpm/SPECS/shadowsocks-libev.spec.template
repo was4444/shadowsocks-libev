@@ -83,7 +83,8 @@ fi
 %else
 if [ $1 -eq 0 ]; then
     /sbin/service shadowsocks-libev stop
-    /sbin/chkconfig --del shadowsocks-libev
+    /sbin/chkconfig --del shadowsocks-libev-server
+    /sbin/chkconfig --del shadowsocks-libev-local
 fi
 %endif
 

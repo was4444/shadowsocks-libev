@@ -22,7 +22,7 @@
 [ -f /etc/default/${NAME} ] && . /etc/default/${NAME} || :
 
 PREFIX=shadowsocks-libev
-FULL_SCRIPT_NAME=$(basename $0)
+FULL_SCRIPT_NAME=$(basename $(readlink -e $0))
 DAEMON=ss${FULL_SCRIPT_NAME#${PREFIX}}
 : ${CONFFILE:="/etc/shadowsocks/config.json"}
 : ${USER:="root"}
@@ -53,7 +53,7 @@ start() {
 
         # Check that networking is up.
         #
-        [ ${NETWORKING} = "yes" ] || exit 0
+        # [ ${NETWORKING} = "yes" ] || exit 0
 
         # Modify the file descriptor limit
         [ ! -z "${MAXFD}" ] && ulimit -n ${MAXFD} || :
