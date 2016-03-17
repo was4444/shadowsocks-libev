@@ -53,7 +53,7 @@ start() {
 
         # Check that networking is up.
         #
-        [ ${NETWORKING} = "yes" ] || exit 0
+        # [ ${NETWORKING} = "yes" ] || exit 0
 
         # Modify the file descriptor limit
         [ ! -z "${MAXFD}" ] && ulimit -n ${MAXFD} || :
