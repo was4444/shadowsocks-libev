@@ -20,7 +20,7 @@ show_help()
     echo -e "  -f    with argument format (\`${format}' by default) used by \`git archive'."
     echo
     echo -e "Description:"
-    echo -e "  This will use \`git archive' to generate a spefical version of "
+    echo -e "  This will use \`git archive' to generate a special version of "
     echo -e "  \`${name}', which then will be used to build the final rpm packages."
     echo
     echo -e "Examples:"
