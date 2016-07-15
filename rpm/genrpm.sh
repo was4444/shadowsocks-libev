@@ -4,7 +4,7 @@ set -e
 
 name="shadowsocks-libev"
 spec_name="${name}.spec"
-version=$(git tag -l v* | tail -1)
+version=$(git tag -l v* | sort --version-sort | tail -1)
 format="tar.xz"
 repo_dir=$(pushd $(dirname $(readlink -e $0)) > /dev/null && git rev-parse --show-toplevel)
 
