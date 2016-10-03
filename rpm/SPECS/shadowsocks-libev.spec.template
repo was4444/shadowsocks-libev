@@ -23,6 +23,8 @@ Source5:	shadowsocks-libev
 Conflicts:	python-shadowsocks python3-shadowsocks
 
 BuildRequires:	openssl-devel
+BuildRequires:	asciidoc
+BuildRequires:	xmlto
 Requires:	openssl
 %if 0%{?with_systemd}
 BuildRequires:	systemd
